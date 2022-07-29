@@ -18,17 +18,20 @@ class Genre(Enum):
 
 
 @dataclass
+class Borrower:
+    first_name: str = ""
+    last_name: str = ""
+    mobile_no: int = 0
+    email: str = ""
+    issue_date: str = ""
+    return_date: str = ""
+
+
+@dataclass
 class BookData:
     title: str = ""
     author: str = ""
     genre: Genre = Genre.OTHER
     publish_year: int = 0
+    borrower: Borrower = Borrower()
 
-    @dataclass
-    class Borrower:
-        first_name: str = ""
-        last_name: str = ""
-        mobile_no: int = 0
-        email: str = ""
-        issue_date: str = ""
-        return_date: str = ""
