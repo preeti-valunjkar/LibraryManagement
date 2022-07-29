@@ -148,6 +148,12 @@ class BookDataManager:
             json.dump(temp_dict, json_file)
 
     def __to_genre(self, genre):
+        """
+        This function is used to convert genre strings in json to
+        objects of data type Genre.
+        :parameter genre: Str representing a book's genre
+        :return: Object of data type Genre
+        """
         if genre == "ROMANCE":
             return Genre.ROMANCE
         elif genre == "FICTION":
@@ -172,10 +178,3 @@ class BookDataManager:
             return Genre.AUTOBIOGRAPHY
         else:
             return Genre.OTHER
-
-
-if __name__ == "__main__":
-    book_data = BookDataManager()
-    book_data.from_json()
-    book_data.return_book("Blink")
-    book_data.to_json()

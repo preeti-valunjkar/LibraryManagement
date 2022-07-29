@@ -3,6 +3,10 @@ from enum import Enum
 
 
 class Genre(Enum):
+    """
+    Class Genre defines the different types of genres for books
+    as an Enum.
+    """
     ROMANCE = 1
     FICTION = 2
     NONFICTION = 3
@@ -19,6 +23,10 @@ class Genre(Enum):
 
 @dataclass
 class Borrower:
+    """
+    Class Borrower defines useful data of a borrower such as name,
+    contact details, issue and return date.
+    """
     first_name: str = ""
     last_name: str = ""
     mobile_no: int = 0
@@ -29,9 +37,12 @@ class Borrower:
 
 @dataclass
 class BookData:
+    """
+    Class Book stores data of a book, including the details of a member
+    who has issued the book.
+    """
     title: str = ""
     author: str = ""
     genre: Genre = Genre.OTHER
     publish_year: int = 0
     borrower: Borrower = Borrower()
-
