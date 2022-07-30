@@ -103,12 +103,12 @@ class BookDataManager:
         if title in self.__book_data:
             issue_date = datetime.today().strftime("%B %d, %Y")
             return_date = (datetime.today() + relativedelta(months=1)).strftime("%B %d, %Y")
-            self.__book_data[title].borrower = Borrower(first_name=book_borrower.first_name,
-                                                        last_name=book_borrower.last_name,
-                                                        mobile_no=book_borrower.mobile_no,
-                                                        email=book_borrower.email,
-                                                        issue_date=issue_date,
-                                                        return_date=return_date)
+            self.__book_data[title].borrower = Borrower(book_borrower.first_name,
+                                                        book_borrower.last_name,
+                                                        book_borrower.mobile_no,
+                                                        book_borrower.email,
+                                                        issue_date,
+                                                        return_date)
             return True
         else:
             return False
@@ -184,11 +184,3 @@ class BookDataManager:
             return Genre.AUTOBIOGRAPHY
         else:
             return Genre.OTHER
-
-#
-# if __name__ == "__main__":
-#     book_data = BookDataManager()
-#     book_data.from_json()
-#     new_book = BookData("Hello", "Hi")
-#     book_data.add_book(new_book)
-#     book_data.to_json()
