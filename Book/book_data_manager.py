@@ -33,6 +33,8 @@ class BookDataManager:
                                         temp_dict[book]['author'],
                                         self.__to_genre(temp_dict[book]['genre']),
                                         int(temp_dict[book]['publish_year']),
+                                        float(temp_dict[book]['rating']),
+                                        temp_dict[book]['desc'],
                                         new_borrower)
                     self.__book_data[book] = new_book
         else:
@@ -52,6 +54,8 @@ class BookDataManager:
                                'author': book_det.author,
                                'genre': book_det.genre.name,
                                'publish_year': book_det.publish_year,
+                               'rating': book_det.rating,
+                               'desc': book_det.description,
                                'first_name': book_det.borrower.first_name,
                                'last_name': book_det.borrower.last_name,
                                'mobile_no': book_det.borrower.mobile_no,
@@ -136,6 +140,8 @@ class BookDataManager:
                                 'author': self.__book_data["newbook"].author,
                                 'genre': str(self.__book_data["newbook"].genre.name),
                                 'publish_year': self.__book_data["newbook"].publish_year,
+                                'rating': self.__book_data["newbook"].rating,
+                                'desc': self.__book_data["newbook"].description,
                                 'first_name': self.__book_data["newbook"].borrower.first_name,
                                 'last_name': self.__book_data["newbook"].borrower.last_name,
                                 'mobile_no': self.__book_data["newbook"].borrower.mobile_no,
@@ -178,3 +184,11 @@ class BookDataManager:
             return Genre.AUTOBIOGRAPHY
         else:
             return Genre.OTHER
+
+#
+# if __name__ == "__main__":
+#     book_data = BookDataManager()
+#     book_data.from_json()
+#     new_book = BookData("Hello", "Hi")
+#     book_data.add_book(new_book)
+#     book_data.to_json()

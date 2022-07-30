@@ -45,4 +45,6 @@ class BookData:
     author: str = ""
     genre: Genre = Genre.OTHER
     publish_year: int = 0
+    rating: float = 0.0
+    description: str = ""
     borrower: Borrower = Borrower()
