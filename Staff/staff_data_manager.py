@@ -88,7 +88,7 @@ class StaffDataManager:
         :return: Bool (True if updated successfully, False otherwise)
         """
         if str(staff_member.employee_id) in self.__staff_data:
-            self.__staff_data[staff_member.employee_id] = staff_member
+            self.__staff_data[str(staff_member.employee_id)] = staff_member
             return True
         else:
             return False
