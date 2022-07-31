@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/pythonProject/Staff/Login/staff_login.ui'
+# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/LibraryManagement/Staff/Login/staff_login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -46,7 +46,7 @@ class Ui_StaffLogin(object):
         self.password_lineEdit.setObjectName("password_lineEdit")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.password_lineEdit)
         self.message_lbl = QtWidgets.QLabel(StaffLogin)
-        self.message_lbl.setGeometry(QtCore.QRect(50, 140, 291, 20))
+        self.message_lbl.setGeometry(QtCore.QRect(50, 130, 291, 20))
         font = QtGui.QFont()
         font.setPointSize(9)
         self.message_lbl.setFont(font)
@@ -54,8 +54,11 @@ class Ui_StaffLogin(object):
         self.message_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.message_lbl.setObjectName("message_lbl")
         self.login_btn = QtWidgets.QPushButton(StaffLogin)
-        self.login_btn.setGeometry(QtCore.QRect(120, 170, 161, 31))
+        self.login_btn.setGeometry(QtCore.QRect(120, 160, 161, 31))
         self.login_btn.setObjectName("login_btn")
+        self.diff_user_btn = QtWidgets.QPushButton(StaffLogin)
+        self.diff_user_btn.setGeometry(QtCore.QRect(120, 200, 161, 31))
+        self.diff_user_btn.setObjectName("diff_user_btn")
 
         self.retranslateUi(StaffLogin)
         QtCore.QMetaObject.connectSlotsByName(StaffLogin)
@@ -66,6 +69,7 @@ class Ui_StaffLogin(object):
         self.username_lbl.setText(_translate("StaffLogin", "Username: "))
         self.password_lbl.setText(_translate("StaffLogin", "Password: "))
         self.login_btn.setText(_translate("StaffLogin", "Login"))
+        self.diff_user_btn.setText(_translate("StaffLogin", "Select Different User"))
 
 
 if __name__ == "__main__":

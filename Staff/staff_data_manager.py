@@ -175,3 +175,8 @@ class StaffDataManager:
             Path.mkdir(LIB_STAFF_DB, exist_ok=True)
         with open(self.__JSON_PATH, "w") as json_file:
             json.dump(temp_dict, json_file)
+
+    def return_staff_details(self, name):
+        for eid in self.__staff_data:
+            if name == (self.__staff_data[eid].first_name + ' ' + self.__staff_data[eid].last_name):
+                return self.__staff_data[eid]

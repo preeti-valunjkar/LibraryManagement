@@ -19,11 +19,19 @@ class WelcomePageController(QtWidgets.QWidget):
         self.staff_main_window = StaffLoginController()
         self.member_main_window = MemberMainWindowController()
 
+        # setup redirect signals
+        self.staff_main_window.redirect_signal.connect(self.reopen_signal)
+
     def staff_btn_clicked(self):
+        self.hide()
         self.staff_main_window.show()
 
     def member_btn_clicked(self):
+        self.hide()
         self.member_main_window.show()
+
+    def reopen_signal(self):
+        self.show()
 
 
 if __name__ == "__main__":

@@ -7,6 +7,8 @@ from Staff.staff_data_classes import StaffLoginCredentials
 
 
 class StaffLoginController(QtWidgets.QWidget):
+    redirect_signal = QtCore.pyqtSignal()
+
     def __init__(self, parent=None):
         super(StaffLoginController, self).__init__(parent)
         self.ui = Ui_StaffLogin()
@@ -14,9 +16,13 @@ class StaffLoginController(QtWidgets.QWidget):
 
         # setup buttons
         self.ui.login_btn.clicked.connect(self.login_btn_clicked)
+        self.ui.diff_user_btn.clicked.connect(self.redirect_btn_clicked)
 
         # setup main window
         self.staff_main_window = StaffMainWindowController()
+
+        # setup signals
+        self.staff_main_window.clear_credentials_signal.connect(self.clear_credentials)
 
     def login_btn_clicked(self):
         staff_data = StaffDataManager()
@@ -26,8 +32,18 @@ class StaffLoginController(QtWidgets.QWidget):
         if uname == "" or upass == "":
             self.ui.message_lbl.setText("Incorrect Username or Password")
         elif staff_data.validate_pass(StaffLoginCredentials(uname, upass)):
-            self.close()
+            self.hide()
             self.staff_main_window.set_staff_name(staff_data.get_staff_name(uname))
             self.staff_main_window.show()
         else:
             self.ui.message_lbl.setText("Incorrect Username or Password")
+
+    def redirect_btn_clicked(self):
+        self.close()
+        self.redirect_signal.emit()
+
+    def clear_credentials(self):
+        self.ui.username_lineEdit.clear()
+        self.ui.password_lineEdit.clear()
+        self.ui.message_lbl.clear()
+        self.show()
