@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/pythonProject/WelcomePage/welcome_page.ui'
+# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/LibraryManagement/WelcomePage/welcome_page.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -16,18 +16,26 @@ class Ui_WelcomePage(object):
         WelcomePage.setObjectName("WelcomePage")
         WelcomePage.resize(400, 300)
         font = QtGui.QFont()
-        font.setPointSize(9)
+        font.setPointSize(8)
         WelcomePage.setFont(font)
+        WelcomePage.setStyleSheet("background-image:\"C:/Users/97150/PycharmProjects/LibraryManagement/Images/book.jpg\";")
         self.gridLayout = QtWidgets.QGridLayout(WelcomePage)
         self.gridLayout.setObjectName("gridLayout")
         self.welcome_lbl = QtWidgets.QLabel(WelcomePage)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Georgia")
+        font.setPointSize(18)
+        font.setBold(False)
+        font.setWeight(50)
         self.welcome_lbl.setFont(font)
         self.welcome_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.welcome_lbl.setObjectName("welcome_lbl")
         self.gridLayout.addWidget(self.welcome_lbl, 0, 0, 1, 1)
         self.user_select_lbl = QtWidgets.QLabel(WelcomePage)
+        font = QtGui.QFont()
+        font.setFamily("Georgia")
+        font.setPointSize(14)
+        self.user_select_lbl.setFont(font)
         self.user_select_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.user_select_lbl.setObjectName("user_select_lbl")
         self.gridLayout.addWidget(self.user_select_lbl, 1, 0, 1, 1)
@@ -35,13 +43,15 @@ class Ui_WelcomePage(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.staff_btn = QtWidgets.QPushButton(WelcomePage)
         font = QtGui.QFont()
-        font.setPointSize(9)
+        font.setFamily("Georgia")
+        font.setPointSize(11)
         self.staff_btn.setFont(font)
         self.staff_btn.setObjectName("staff_btn")
         self.horizontalLayout.addWidget(self.staff_btn)
         self.member_btn = QtWidgets.QPushButton(WelcomePage)
         font = QtGui.QFont()
-        font.setPointSize(9)
+        font.setFamily("Georgia")
+        font.setPointSize(11)
         self.member_btn.setFont(font)
         self.member_btn.setObjectName("member_btn")
         self.horizontalLayout.addWidget(self.member_btn)
@@ -54,7 +64,7 @@ class Ui_WelcomePage(object):
         _translate = QtCore.QCoreApplication.translate
         WelcomePage.setWindowTitle(_translate("WelcomePage", "Welcome Page"))
         self.welcome_lbl.setText(_translate("WelcomePage", "Welcome to Mini Library!"))
-        self.user_select_lbl.setText(_translate("WelcomePage", "Please select a User:"))
+        self.user_select_lbl.setText(_translate("WelcomePage", "Please select a user:"))
         self.staff_btn.setText(_translate("WelcomePage", "Staff"))
         self.member_btn.setText(_translate("WelcomePage", "Member"))
 

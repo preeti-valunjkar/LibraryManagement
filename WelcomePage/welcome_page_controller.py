@@ -3,6 +3,8 @@ import sys
 from PyQt5 import QtWidgets, QtCore, QtGui
 from Staff.Login.staff_login_controller import StaffLoginController
 from Member.member_main_window_controller import MemberMainWindowController
+from destination import LIB_CSS
+from pathlib import Path
 
 
 class WelcomePageController(QtWidgets.QWidget):
@@ -10,6 +12,11 @@ class WelcomePageController(QtWidgets.QWidget):
         super(WelcomePageController, self).__init__(parent)
         self.ui = Ui_WelcomePage()
         self.ui.setupUi(self)
+
+        # setup css
+        # main_css = str(Path(LIB_CSS, 'welcome_page.css'))
+        # with open(main_css, "r") as fh:
+        #     self.WelcomePage.setStyleSheet(fh.read())
 
         # setup buttons
         self.ui.staff_btn.clicked.connect(self.staff_btn_clicked)
