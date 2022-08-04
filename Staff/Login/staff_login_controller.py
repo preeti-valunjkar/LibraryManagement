@@ -4,6 +4,8 @@ from Staff.Login.staff_login_ui import Ui_StaffLogin
 from Staff.staff_main_window_controller import StaffMainWindowController
 from Staff.staff_data_manager import StaffDataManager
 from Staff.staff_data_classes import StaffLoginCredentials
+from pathlib import Path
+from destination import LIB_CSS
 
 
 class StaffLoginController(QtWidgets.QWidget):
@@ -13,6 +15,11 @@ class StaffLoginController(QtWidgets.QWidget):
         super(StaffLoginController, self).__init__(parent)
         self.ui = Ui_StaffLogin()
         self.ui.setupUi(self)
+
+        # setup css
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        with open(main_css, "r") as fh:
+            self.setStyleSheet(fh.read())
 
         # setup buttons
         self.ui.login_btn.clicked.connect(self.login_btn_clicked)

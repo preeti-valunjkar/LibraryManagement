@@ -14,9 +14,9 @@ class WelcomePageController(QtWidgets.QWidget):
         self.ui.setupUi(self)
 
         # setup css
-        # main_css = str(Path(LIB_CSS, 'welcome_page.css'))
-        # with open(main_css, "r") as fh:
-        #     self.WelcomePage.setStyleSheet(fh.read())
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        with open(main_css, "r") as fh:
+            self.setStyleSheet(fh.read())
 
         # setup buttons
         self.ui.staff_btn.clicked.connect(self.staff_btn_clicked)
