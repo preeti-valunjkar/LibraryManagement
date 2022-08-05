@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtCore, QtGui, uic
 from pathlib import Path
-from destination import LIB_ROOT
+from destination import LIB_ROOT, LIB_CSS
 from Staff.staff_data_manager import StaffDataManager
 
 
@@ -9,6 +9,12 @@ class StaffProfileController(QtWidgets.QWidget):
         super(StaffProfileController, self).__init__(*args, **kwargs)
         uic.loadUi(str(Path(LIB_ROOT, 'Staff/staff_profile.ui')), self)
         self.current_staff = None
+
+        # setup css
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        font_css = str(Path(LIB_CSS, 'fonts.css'))
+        with open(main_css, "r") as pss, open(font_css, "r") as fss:
+            self.setStyleSheet(pss.read() + fss.read())
 
         # setup buttons
         self.apply_btn.hide()

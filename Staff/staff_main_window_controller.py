@@ -6,6 +6,8 @@ from Book.book_management_controller import BookManagementController
 from Book.issue_book_controller import IssueBookController
 from Book.return_book_controller import ReturnBookController
 from Staff.staff_profile_controller import StaffProfileController
+from pathlib import Path
+from destination import LIB_CSS
 
 
 class StaffMainWindowController(QtWidgets.QMainWindow):
@@ -16,6 +18,12 @@ class StaffMainWindowController(QtWidgets.QMainWindow):
         self.ui = Ui_StaffMainWindow()
         self.ui.setupUi(self)
         self.staff_name = ""
+
+        # setup css
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        font_css = str(Path(LIB_CSS, 'fonts.css'))
+        with open(main_css, "r") as pss, open(font_css, "r") as fss:
+            self.ui.centralwidget.setStyleSheet(pss.read() + fss.read())
 
         self.manage_staff = StaffManagementController()
         self.ui.stackedWidget.addWidget(self.manage_staff)

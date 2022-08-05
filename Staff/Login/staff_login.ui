@@ -63,6 +63,9 @@
         <pointsize>10</pointsize>
        </font>
       </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhHiddenText|Qt::ImhSensitiveData</set>
+      </property>
      </widget>
     </item>
    </layout>

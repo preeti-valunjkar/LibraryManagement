@@ -1,0 +1,8 @@
+QWidget{
+    font-family: "Cambria";
+    font-size: 15px;
+}
+
+QLabel#welcome_msg_lbl{
+    font-size: 20px;
+}

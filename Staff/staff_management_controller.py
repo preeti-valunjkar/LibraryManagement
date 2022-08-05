@@ -3,6 +3,7 @@ from pathlib import Path
 from destination import LIB_ROOT
 from Staff.staff_data_classes import StaffData
 from Staff.staff_data_manager import StaffDataManager
+from destination import LIB_CSS
 
 
 class StaffManagementController(QtWidgets.QWidget):
@@ -10,6 +11,12 @@ class StaffManagementController(QtWidgets.QWidget):
         super(StaffManagementController, self).__init__(*args, **kwargs)
         uic.loadUi(str(Path(LIB_ROOT, 'Staff/staff_management.ui')), self)
         self.changeinfostackedWidget.setCurrentIndex(0)
+
+        # setup css
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        font_css = str(Path(LIB_CSS, 'fonts.css'))
+        with open(main_css, "r") as pss, open(font_css, "r") as fss:
+            self.setStyleSheet(pss.read() + fss.read())
 
         # setup buttons
         self.add_staff_btn.clicked.connect(self.add_staff_btn_clicked)

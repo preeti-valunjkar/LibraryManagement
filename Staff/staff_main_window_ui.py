@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/pythonProject/Staff/staff_main_window.ui'
+# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/LibraryManagement/Staff/staff_main_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -27,7 +27,7 @@ class Ui_StaffMainWindow(object):
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(157, 50, 741, 554))
+        self.stackedWidget.setGeometry(QtCore.QRect(167, 50, 751, 561))
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
@@ -69,6 +69,11 @@ class Ui_StaffMainWindow(object):
         self.return_book_btn.setFont(font)
         self.return_book_btn.setObjectName("return_book_btn")
         self.verticalLayout.addWidget(self.return_book_btn)
+        self.line_2 = QtWidgets.QFrame(self.centralwidget)
+        self.line_2.setGeometry(QtCore.QRect(150, 50, 20, 571))
+        self.line_2.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
         StaffMainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(StaffMainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 937, 22))
@@ -93,7 +98,7 @@ class Ui_StaffMainWindow(object):
     def retranslateUi(self, StaffMainWindow):
         _translate = QtCore.QCoreApplication.translate
         StaffMainWindow.setWindowTitle(_translate("StaffMainWindow", "Staff Utility Tools"))
-        self.manage_staff_btn.setText(_translate("StaffMainWindow", "Manage Staff Members"))
+        self.manage_staff_btn.setText(_translate("StaffMainWindow", "Manage Staff"))
         self.manage_books_btn.setText(_translate("StaffMainWindow", "Manage Books"))
         self.issue_book_btn.setText(_translate("StaffMainWindow", "Issue a Book"))
         self.return_book_btn.setText(_translate("StaffMainWindow", "Return a Book"))

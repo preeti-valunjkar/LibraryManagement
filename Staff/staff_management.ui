@@ -6,420 +6,424 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>663</width>
-    <height>521</height>
+    <width>814</width>
+    <height>643</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Staff Member Management</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="currentIndex">
-      <number>0</number>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>781</width>
+     <height>611</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="add_tab">
+    <attribute name="title">
+     <string>Add Staff Member</string>
+    </attribute>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>70</y>
+       <width>421</width>
+       <height>221</height>
+      </rect>
      </property>
-     <widget class="QWidget" name="add_tab">
-      <attribute name="title">
-       <string>Add Staff Member</string>
-      </attribute>
-      <widget class="QWidget" name="formLayoutWidget">
+     <layout class="QFormLayout" name="formLayout">
+      <property name="horizontalSpacing">
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>8</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="eid_lbl">
+        <property name="text">
+         <string>Employee ID: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="eid_add_lineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="uname_lbl">
+        <property name="text">
+         <string>Username: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="uname_lineEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="pwd_lbl">
+        <property name="text">
+         <string>Password: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="pwd_lineEdit"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="fname_lbl">
+        <property name="text">
+         <string>First Name: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="fname_lineEdit"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lname_lbl">
+        <property name="text">
+         <string>Last Name: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lname_lineEdit"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="mobno_lbl">
+        <property name="text">
+         <string>Mobile Number: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="mobno_lineEdit"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="email_lbl">
+        <property name="text">
+         <string>Email Address: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="email_lineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="add_status_lbl">
+     <property name="geometry">
+      <rect>
+       <x>229</x>
+       <y>320</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="add_staff_btn">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>360</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Staff Member</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="remove_tab">
+    <attribute name="title">
+     <string>Remove Staff Member</string>
+    </attribute>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>100</y>
+       <width>281</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="eid_remove_lbl">
+        <property name="text">
+         <string>Enter Staff Employee ID:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="eid_remove_lineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="remove_status_lbl">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>220</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="remove_staff_btn">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>260</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Remove Staff Member</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="change_info_tab">
+    <attribute name="title">
+     <string>Change Staff Member Info</string>
+    </attribute>
+    <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>30</y>
+       <width>291</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="eid_change_lbl">
+        <property name="text">
+         <string>Enter Staff Employee ID: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="eid_change_lineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="get_staff_status_lbl">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>110</y>
+       <width>391</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="changeinfostackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>130</y>
+       <width>571</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="cover"/>
+     <widget class="QWidget" name="main">
+      <widget class="QWidget" name="verticalLayoutWidget">
        <property name="geometry">
         <rect>
-         <x>100</x>
-         <y>30</y>
-         <width>421</width>
-         <height>221</height>
+         <x>50</x>
+         <y>20</y>
+         <width>521</width>
+         <height>231</height>
         </rect>
        </property>
-       <layout class="QFormLayout" name="formLayout">
-        <property name="horizontalSpacing">
-         <number>6</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>8</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLabel" name="eid_lbl">
-          <property name="text">
-           <string>Employee ID: </string>
-          </property>
-         </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="fname_change_lbl">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Please enter new first name: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fname_change_lineEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="eid_add_lineEdit"/>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="lname_changed_lbl">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Please enter new last name: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lname_changed_lineEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="uname_lbl">
-          <property name="text">
-           <string>Username: </string>
-          </property>
-         </widget>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="mobno_changed_lbl">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Please enter new mobile number: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="mobno_changed_lineEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="uname_lineEdit"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="pwd_lbl">
-          <property name="text">
-           <string>Password: </string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="pwd_lineEdit"/>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="fname_lbl">
-          <property name="text">
-           <string>First Name: </string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="fname_lineEdit"/>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="lname_lbl">
-          <property name="text">
-           <string>Last Name: </string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QLineEdit" name="lname_lineEdit"/>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="mobno_lbl">
-          <property name="text">
-           <string>Mobile Number: </string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="1">
-         <widget class="QLineEdit" name="mobno_lineEdit"/>
-        </item>
-        <item row="6" column="0">
-         <widget class="QLabel" name="email_lbl">
-          <property name="text">
-           <string>Email Address: </string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="1">
-         <widget class="QLineEdit" name="email_lineEdit"/>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="email_changed_lbl">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Please enter new email id: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="email_changed_lineEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
-      <widget class="QLabel" name="add_status_lbl">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>260</y>
-         <width>321</width>
-         <height>20</height>
-        </rect>
+      <widget class="QPushButton" name="apply_changes_btn">
+       <property name="enabled">
+        <bool>true</bool>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="add_staff_btn">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>290</y>
-         <width>161</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Add Staff Member</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="remove_tab">
-      <attribute name="title">
-       <string>Remove Staff Member</string>
-      </attribute>
-      <widget class="QWidget" name="horizontalLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>40</y>
-         <width>281</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="eid_remove_lbl">
-          <property name="text">
-           <string>Enter Staff Employee ID:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="eid_remove_lineEdit"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="remove_status_lbl">
-       <property name="geometry">
-        <rect>
-         <x>210</x>
-         <y>120</y>
-         <width>201</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="remove_staff_btn">
        <property name="geometry">
         <rect>
          <x>200</x>
-         <y>160</y>
-         <width>221</width>
-         <height>23</height>
+         <y>269</y>
+         <width>211</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>Remove Staff Member</string>
+        <string>Apply Changes</string>
        </property>
       </widget>
-     </widget>
-     <widget class="QWidget" name="change_info_tab">
-      <attribute name="title">
-       <string>Change Staff Member Info</string>
-      </attribute>
-      <widget class="QWidget" name="horizontalLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>30</y>
-         <width>291</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QLabel" name="eid_change_lbl">
-          <property name="text">
-           <string>Enter Staff Employee ID: </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="eid_change_lineEdit"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QLabel" name="get_staff_status_lbl">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>110</y>
-         <width>391</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QStackedWidget" name="changeinfostackedWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>120</y>
-         <width>571</width>
-         <height>301</height>
-        </rect>
-       </property>
-       <property name="currentIndex">
-        <number>1</number>
-       </property>
-       <widget class="QWidget" name="cover"/>
-       <widget class="QWidget" name="main">
-        <widget class="QWidget" name="verticalLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>20</y>
-           <width>521</width>
-           <height>231</height>
-          </rect>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <item>
-             <widget class="QLabel" name="fname_change_lbl">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-              <property name="text">
-               <string>Please enter new first name: </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="fname_change_lineEdit">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <item>
-             <widget class="QLabel" name="lname_changed_lbl">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-              <property name="text">
-               <string>Please enter new last name: </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lname_changed_lineEdit">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QLabel" name="mobno_changed_lbl">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-              <property name="text">
-               <string>Please enter new mobile number: </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="mobno_changed_lineEdit">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="email_changed_lbl">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-              <property name="text">
-               <string>Please enter new email id: </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="email_changed_lineEdit">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QPushButton" name="apply_changes_btn">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>190</x>
-           <y>260</y>
-           <width>211</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Apply Changes</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QPushButton" name="get_details_btn">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>80</y>
-         <width>181</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Get Staff Member Details</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="apply_msg_lbl">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>430</y>
-         <width>321</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <zorder>changeinfostackedWidget</zorder>
-      <zorder>horizontalLayoutWidget_2</zorder>
-      <zorder>get_staff_status_lbl</zorder>
-      <zorder>get_details_btn</zorder>
-      <zorder>apply_msg_lbl</zorder>
      </widget>
     </widget>
-   </item>
-  </layout>
+    <widget class="QPushButton" name="get_details_btn">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>100</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Get Staff Member Details</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="apply_msg_lbl">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>460</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>changeinfostackedWidget</zorder>
+    <zorder>horizontalLayoutWidget_2</zorder>
+    <zorder>get_staff_status_lbl</zorder>
+    <zorder>get_details_btn</zorder>
+    <zorder>apply_msg_lbl</zorder>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

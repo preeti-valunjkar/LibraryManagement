@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtCore, QtGui, uic
 from pathlib import Path
-from destination import LIB_ROOT
+from destination import LIB_ROOT, LIB_CSS
 from Book.book_data_class import BookData, Genre
 from Book.book_data_manager import BookDataManager
 
@@ -9,6 +9,12 @@ class BookManagementController(QtWidgets.QWidget):
     def __init__(self, *args, **kwargs):
         super(BookManagementController, self).__init__(*args, **kwargs)
         uic.loadUi(str(Path(LIB_ROOT, 'Book/book_management.ui')), self)
+
+        # setup css
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        font_css = str(Path(LIB_CSS, 'fonts.css'))
+        with open(main_css, "r") as pss, open(font_css, "r") as fss:
+            self.setStyleSheet(pss.read() + fss.read())
 
         # setup genre combo box
         genre_list = []

@@ -17,7 +17,7 @@ class StaffLoginController(QtWidgets.QWidget):
         self.ui.setupUi(self)
 
         # setup css
-        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        main_css = str(Path(LIB_CSS, 'opening_pages.css'))
         with open(main_css, "r") as fh:
             self.setStyleSheet(fh.read())
 

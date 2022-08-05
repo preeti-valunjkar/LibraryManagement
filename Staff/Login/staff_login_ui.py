@@ -43,6 +43,7 @@ class Ui_StaffLogin(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.password_lineEdit.setFont(font)
+        self.password_lineEdit.setInputMethodHints(QtCore.Qt.ImhHiddenText|QtCore.Qt.ImhSensitiveData)
         self.password_lineEdit.setObjectName("password_lineEdit")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.password_lineEdit)
         self.message_lbl = QtWidgets.QLabel(StaffLogin)

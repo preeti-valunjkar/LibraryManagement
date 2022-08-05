@@ -43,10 +43,10 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>157</x>
+      <x>167</x>
       <y>50</y>
-      <width>741</width>
-      <height>554</height>
+      <width>751</width>
+      <height>561</height>
      </rect>
     </property>
     <widget class="QWidget" name="page"/>
@@ -87,7 +87,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Manage Staff Members</string>
+        <string>Manage Staff</string>
        </property>
       </widget>
      </item>
@@ -128,6 +128,19 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>20</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

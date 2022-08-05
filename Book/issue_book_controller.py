@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtCore, QtGui, uic
 from pathlib import Path
-from destination import LIB_ROOT
+from destination import LIB_ROOT, LIB_CSS
 from Book.book_data_class import Borrower
 from Book.book_data_manager import BookDataManager
 from datetime import datetime
@@ -11,6 +11,12 @@ class IssueBookController(QtWidgets.QWidget):
     def __init__(self, *args, **kwargs):
         super(IssueBookController, self).__init__(*args, **kwargs)
         uic.loadUi(str(Path(LIB_ROOT, 'Book/issue_book.ui')), self)
+
+        # setup css
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
+        font_css = str(Path(LIB_CSS, 'fonts.css'))
+        with open(main_css, "r") as pss, open(font_css, "r") as fss:
+            self.setStyleSheet(pss.read() + fss.read())
 
         # setup buttons
         self.issue_btn.clicked.connect(self.issue_btn_clicked)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/pythonProject/Staff/staff_management.ui'
+# Form implementation generated from reading ui file 'C:/Users/97150/PycharmProjects/LibraryManagement/Staff/staff_management.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,10 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_StaffManagement(object):
     def setupUi(self, StaffManagement):
         StaffManagement.setObjectName("StaffManagement")
-        StaffManagement.resize(663, 521)
-        self.gridLayout = QtWidgets.QGridLayout(StaffManagement)
-        self.gridLayout.setObjectName("gridLayout")
+        StaffManagement.resize(814, 643)
         self.tabWidget = QtWidgets.QTabWidget(StaffManagement)
+        self.tabWidget.setGeometry(QtCore.QRect(9, 9, 781, 601))
         self.tabWidget.setObjectName("tabWidget")
         self.add_tab = QtWidgets.QWidget()
         self.add_tab.setObjectName("add_tab")
@@ -208,7 +207,6 @@ class Ui_StaffManagement(object):
         self.get_details_btn.raise_()
         self.apply_msg_lbl.raise_()
         self.tabWidget.addTab(self.change_info_tab, "")
-        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
         self.retranslateUi(StaffManagement)
         self.tabWidget.setCurrentIndex(0)
