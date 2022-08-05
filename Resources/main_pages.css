@@ -19,3 +19,8 @@ QTabWidget#tabWidget{
     border-style: none;
     border-color: none;
 }
+
+QTableWidget{
+    border-style: none;
+    border-color: none;
+}

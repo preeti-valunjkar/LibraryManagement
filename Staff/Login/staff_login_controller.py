@@ -18,8 +18,9 @@ class StaffLoginController(QtWidgets.QWidget):
 
         # setup css
         main_css = str(Path(LIB_CSS, 'opening_pages.css'))
-        with open(main_css, "r") as fh:
-            self.setStyleSheet(fh.read())
+        font_css = str(Path(LIB_CSS, 'fonts.css'))
+        with open(main_css, "r") as pss, open(font_css, "r") as fss:
+            self.setStyleSheet(pss.read() + fss.read())
 
         # setup buttons
         self.ui.login_btn.clicked.connect(self.login_btn_clicked)

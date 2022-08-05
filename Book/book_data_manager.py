@@ -5,6 +5,7 @@ from Book.book_data_class import BookData
 import json
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+import copy
 
 
 class BookDataManager:
@@ -184,3 +185,7 @@ class BookDataManager:
             return Genre.AUTOBIOGRAPHY
         else:
             return Genre.OTHER
+
+    def return_dict(self):
+        new_copy = copy.deepcopy(self.__book_data)
+        return new_copy

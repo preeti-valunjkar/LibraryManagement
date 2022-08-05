@@ -3,6 +3,20 @@ QWidget{
     font-size: 15px;
 }
 
+QLabel{
+    font-family: "Cambria";
+    font-size: 15px;
+}
+
 QLabel#welcome_msg_lbl{
     font-size: 20px;
+}
+
+QLabel#title_lbl{
+    font-size: 18px;
+}
+
+QTableWidget{
+    font-family: "Cambria";
+    font-size: 15px;
 }

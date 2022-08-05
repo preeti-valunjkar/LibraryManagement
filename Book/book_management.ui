@@ -46,7 +46,7 @@
        <number>12</number>
       </property>
       <item row="0" column="0">
-       <widget class="QLabel" name="title_lbl">
+       <widget class="QLabel" name="book_title_lbl">
         <property name="text">
          <string>Book Title: </string>
         </property>

@@ -27,9 +27,9 @@ class Ui_BookManagement(object):
         self.formLayout.setContentsMargins(0, 0, 0, 0)
         self.formLayout.setSpacing(12)
         self.formLayout.setObjectName("formLayout")
-        self.title_lbl = QtWidgets.QLabel(self.formLayoutWidget)
-        self.title_lbl.setObjectName("title_lbl")
-        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.title_lbl)
+        self.book_title_lbl = QtWidgets.QLabel(self.formLayoutWidget)
+        self.book_title_lbl.setObjectName("book_title_lbl")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.book_title_lbl)
         self.title_lineEdit = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.title_lineEdit.setObjectName("title_lineEdit")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.title_lineEdit)
@@ -109,7 +109,7 @@ class Ui_BookManagement(object):
     def retranslateUi(self, BookManagement):
         _translate = QtCore.QCoreApplication.translate
         BookManagement.setWindowTitle(_translate("BookManagement", "Form"))
-        self.title_lbl.setText(_translate("BookManagement", "Book Title: "))
+        self.book_title_lbl.setText(_translate("BookManagement", "Book Title: "))
         self.author_lbl.setText(_translate("BookManagement", "Author:"))
         self.genre_lbl.setText(_translate("BookManagement", "Genre: "))
         self.pubyear_lbl.setText(_translate("BookManagement", "Year Published: "))
