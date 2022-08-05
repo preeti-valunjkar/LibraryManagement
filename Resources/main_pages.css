@@ -1,4 +1,21 @@
 QWidget{
-    background-color: rgb(0, 32, 63);
-    color: rgb(173, 239, 209);
+    color: rgb(85, 96, 118);
+}
+
+QWidget#centralwidget {
+    background-color: rgb(208, 201, 208);
+    border-style: none;
+    border-color: none;
+}
+
+QStackedWidget{
+    background-color: rgb(208, 201, 208);
+    border-style: none;
+    border-color: none;
+}
+
+QTabWidget#tabWidget{
+    background-color: rgb(208, 201, 208);
+    border-style: none;
+    border-color: none;
 }
