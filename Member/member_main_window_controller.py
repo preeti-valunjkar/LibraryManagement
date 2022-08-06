@@ -6,18 +6,21 @@ from Book.book_data_manager import BookDataManager
 
 
 class MemberMainWindowController(QtWidgets.QMainWindow):
+    redirect_signal = QtCore.pyqtSignal()
+
     def __init__(self, parent=None):
         super(MemberMainWindowController, self).__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        # setup triggers
+        self.ui.actionSelect_Diff_User.triggered.connect(self.redirect_action_triggered)
+
         # setup css
-        main_css = str(Path(LIB_CSS, 'opening_pages.css'))
+        main_css = str(Path(LIB_CSS, 'main_pages.css'))
         font_css = str(Path(LIB_CSS, 'fonts.css'))
         with open(main_css, "r") as pss, open(font_css, "r") as fss:
-            self.setStyleSheet(pss.read() + fss.read())
-
-        self.setup_table()
+            self.ui.centralwidget.setStyleSheet(pss.read() + fss.read())
 
     def setup_table(self):
         book_data = BookDataManager()
@@ -29,6 +32,9 @@ class MemberMainWindowController(QtWidgets.QMainWindow):
             self.ui.tableWidget.insertRow(row_count)
             item = QtWidgets.QLabel()
             item.setText(book_dict[book].title)
+            item.setToolTip("Rating: " + str(book_dict[book].rating) + "\n" +
+                            "Publish Year: " + str(book_dict[book].publish_year) + "\n" +
+                            "Description: " + book_dict[book].description)
             self.ui.tableWidget.setCellWidget(i, 0, item)
             item = QtWidgets.QLabel()
             item.setText(book_dict[book].author)
@@ -46,3 +52,8 @@ class MemberMainWindowController(QtWidgets.QMainWindow):
             item.setText(book_dict[book].borrower.return_date)
             self.ui.tableWidget.setCellWidget(i, 4, item)
             i += 1
+
+    def redirect_action_triggered(self):
+        self.ui.tableWidget.setRowCount(0)
+        self.close()
+        self.redirect_signal.emit()

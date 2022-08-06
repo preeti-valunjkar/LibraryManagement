@@ -15,11 +15,11 @@ class Ui_IssueBook(object):
     def setupUi(self, IssueBook):
         IssueBook.setObjectName("IssueBook")
         IssueBook.resize(803, 621)
-        self.title_lbl = QtWidgets.QLabel(IssueBook)
-        self.title_lbl.setGeometry(QtCore.QRect(70, 70, 131, 31))
-        self.title_lbl.setObjectName("title_lbl")
+        self.issue_title_lbl = QtWidgets.QLabel(IssueBook)
+        self.issue_title_lbl.setGeometry(QtCore.QRect(80, 70, 121, 31))
+        self.issue_title_lbl.setObjectName("issue_title_lbl")
         self.title_lineEdit = QtWidgets.QLineEdit(IssueBook)
-        self.title_lineEdit.setGeometry(QtCore.QRect(240, 70, 481, 31))
+        self.title_lineEdit.setGeometry(QtCore.QRect(210, 70, 481, 31))
         self.title_lineEdit.setObjectName("title_lineEdit")
         self.formLayoutWidget = QtWidgets.QWidget(IssueBook)
         self.formLayoutWidget.setGeometry(QtCore.QRect(220, 160, 381, 131))
@@ -77,7 +77,7 @@ class Ui_IssueBook(object):
     def retranslateUi(self, IssueBook):
         _translate = QtCore.QCoreApplication.translate
         IssueBook.setWindowTitle(_translate("IssueBook", "Issue Book"))
-        self.title_lbl.setText(_translate("IssueBook", "Book Title: "))
+        self.issue_title_lbl.setText(_translate("IssueBook", "Book Title: "))
         self.fname_lbl.setText(_translate("IssueBook", "Borrower First Name: "))
         self.lname_lbl.setText(_translate("IssueBook", "Borrower Last Name: "))
         self.mobno_lbl.setText(_translate("IssueBook", "Borrower Mobile Number: "))

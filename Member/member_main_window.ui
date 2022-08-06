@@ -101,14 +101,14 @@
     <property name="title">
      <string>Actions</string>
     </property>
-    <addaction name="actionBack_to_Login"/>
+    <addaction name="actionSelect_Diff_User"/>
    </widget>
    <addaction name="menuBack"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionBack_to_Login">
+  <action name="actionSelect_Diff_User">
    <property name="text">
-    <string>Back</string>
+    <string>Select Different User</string>
    </property>
   </action>
  </widget>

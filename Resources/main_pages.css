@@ -2,25 +2,8 @@ QWidget{
     color: rgb(85, 96, 118);
 }
 
-QWidget#centralwidget {
+QWidget#centralwidget, QStackedWidget, QTabWidget#tabWidget, QTableWidget {
     background-color: rgb(208, 201, 208);
-    border-style: none;
-    border-color: none;
-}
-
-QStackedWidget{
-    background-color: rgb(208, 201, 208);
-    border-style: none;
-    border-color: none;
-}
-
-QTabWidget#tabWidget{
-    background-color: rgb(208, 201, 208);
-    border-style: none;
-    border-color: none;
-}
-
-QTableWidget{
     border-style: none;
     border-color: none;
 }

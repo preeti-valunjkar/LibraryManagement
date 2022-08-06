@@ -21,9 +21,9 @@ class Ui_ReturnBook(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.title_lbl = QtWidgets.QLabel(self.horizontalLayoutWidget)
-        self.title_lbl.setObjectName("title_lbl")
-        self.horizontalLayout.addWidget(self.title_lbl)
+        self.return_title_lbl = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.return_title_lbl.setObjectName("return_title_lbl")
+        self.horizontalLayout.addWidget(self.return_title_lbl)
         self.title_lineEdit = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
         self.title_lineEdit.setObjectName("title_lineEdit")
         self.horizontalLayout.addWidget(self.title_lineEdit)
@@ -45,7 +45,7 @@ class Ui_ReturnBook(object):
     def retranslateUi(self, ReturnBook):
         _translate = QtCore.QCoreApplication.translate
         ReturnBook.setWindowTitle(_translate("ReturnBook", "Return Book"))
-        self.title_lbl.setText(_translate("ReturnBook", "Book Title: "))
+        self.return_title_lbl.setText(_translate("ReturnBook", "Book Title: "))
         self.return_btn.setText(_translate("ReturnBook", "Return Book"))
 
 

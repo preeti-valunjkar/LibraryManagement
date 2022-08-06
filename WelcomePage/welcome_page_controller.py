@@ -28,12 +28,14 @@ class WelcomePageController(QtWidgets.QWidget):
 
         # setup redirect signals
         self.staff_main_window.redirect_signal.connect(self.reopen_signal)
+        self.member_main_window.redirect_signal.connect(self.reopen_signal)
 
     def staff_btn_clicked(self):
         self.hide()
         self.staff_main_window.show()
 
     def member_btn_clicked(self):
+        self.member_main_window.setup_table()
         self.hide()
         self.member_main_window.show()
 

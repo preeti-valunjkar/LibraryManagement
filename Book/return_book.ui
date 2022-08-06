@@ -24,7 +24,7 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QLabel" name="title_lbl">
+     <widget class="QLabel" name="return_title_lbl">
       <property name="text">
        <string>Book Title: </string>
       </property>

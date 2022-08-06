@@ -60,9 +60,9 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.actionBack_to_Login = QtWidgets.QAction(MainWindow)
-        self.actionBack_to_Login.setObjectName("actionBack_to_Login")
-        self.menuBack.addAction(self.actionBack_to_Login)
+        self.actionSelect_Diff_User = QtWidgets.QAction(MainWindow)
+        self.actionSelect_Diff_User.setObjectName("actionSelect_Diff_User")
+        self.menuBack.addAction(self.actionSelect_Diff_User)
         self.menubar.addAction(self.menuBack.menuAction())
 
         self.retranslateUi(MainWindow)
@@ -83,7 +83,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Return Date"))
         self.menuBack.setTitle(_translate("MainWindow", "Actions"))
-        self.actionBack_to_Login.setText(_translate("MainWindow", "Back"))
+        self.actionSelect_Diff_User.setText(_translate("MainWindow", "Select Different User"))
 
 
 if __name__ == "__main__":
